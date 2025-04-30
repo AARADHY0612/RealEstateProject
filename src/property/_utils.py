@@ -20,9 +20,10 @@ ORD_COLS_MAPPING = {
 }
 
 
-def format_99_option(x: int):
-    """Format the encode value `99` in **BEDROOM_NUM** and **BALCONY_NUM** feature."""
-    if x == 99 or x == "99":
+def format_99_option(x) -> str:
+    """Format the encoded value `99` in BEDROOM_NUM and BALCONY_NUM features."""
+    x = str(x)  # Ensure x is treated as a string safely
+    if x == "99":
         return "More than Above"
     return x
 
@@ -34,7 +35,7 @@ def query_for_rental_property(
     """Return the rental properties dataframe from the passed dataframe."""
     df = pd.concat(
         [
-            df[df["DESCRIPTION"].str.contains(" rent ") & (df["PRICE"] < 20)],
+            df[df["DESCRIPTION"].str.contains(" rent ", case=False, na=False) & (df["PRICE"] < 20)],
             df.query(extra_query if extra_query else "PRICE<0"),
         ]
     ).drop_duplicates(ignore_index=True)
