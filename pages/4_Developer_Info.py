@@ -16,7 +16,7 @@ st.markdown("""
 - 🛠️ Passionate about Machine Learning and Data Science.
 - 📚 Currently pursuing B.Tech from Jaypee University of Engineering and Technology
 - 🌍 Interested in real-world applications of AI and Data.
-- 📫 Reach out to me via: [sethaaradhy@gmail.com](sethaaradhy@gmail.com)
+- 📫 Reach out to me via: [aaradhyseth238@gmail.com](aaradhyseth238@gmail.com)
 """)
 
 # Download Resume Button
